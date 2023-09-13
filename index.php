@@ -56,6 +56,21 @@ $wanted  = 5;
 $deliver = true;
 $can_buy = (($wanted <= $stock) && ($deliver == true));
 
+/*example */
+$username = 'Viren';                                   // Variable to hold username
+
+$greeting = 'Namaste, ' . $username . '.';             // Greeting is 'Hello' + username
+
+$offer = [                                           // Create array to hold offer
+    'item'     => 'Chocolate',                       // Item on offer
+    'qty'      => 3,                                 // Quantity to buy
+    'price'    => 6,                                 // Usual price per pack
+    'discount' => 4,   
+];
+$usual_price = $offer['qty'] * $offer['price'];      // Usual total price
+$offer_price = $offer['qty'] * $offer['discount'];   // Offer total price
+$saving      = $usual_price - $offer_price;          // Total saving
+
   
 ?>
 <!DOCTYPE html>
@@ -121,6 +136,16 @@ $can_buy = (($wanted <= $stock) && ($deliver == true));
     <p>Stock:   <?= $stock ?></p>
     <p>Ordered: <?= $wanted ?></p>
     <p>Can buy: <?= $can_buy ?></p>
+
+    <h2>Multi-buy Offer</h2>
+
+<p><?= $greeting ?></p>
+
+<p class="sticker">Save $<?= $saving ?></p>
+
+<p>Buy <?= $offer['qty'] ?> packs of <?= $offer['item'] ?> 
+  for $<?= $offer_price ?><br> (usual price $<?= $usual_price ?>)</p> 
+
 
 
   </body>
