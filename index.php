@@ -49,6 +49,13 @@ $stock   = 8;
 $wanted  = 5;
 $can_buy = ($wanted <= $stock);
 
+/*logical operators */
+$item    = 'Chocolate';
+$stock   = 3;
+$wanted  = 5;
+$deliver = true;
+$can_buy = (($wanted <= $stock) && ($deliver == true));
+
   
 ?>
 <!DOCTYPE html>
@@ -107,6 +114,12 @@ $can_buy = ($wanted <= $stock);
     <p>Item:    <?= $item ?></p>
     <p>Stock:   <?= $stock ?></p>
     <p>Wanted:  <?= $wanted ?></p>
+    <p>Can buy: <?= $can_buy ?></p>
+
+    <h2>Shopping Cart</h2>
+    <p>Item:    <?= $item ?></p>
+    <p>Stock:   <?= $stock ?></p>
+    <p>Ordered: <?= $wanted ?></p>
     <p>Can buy: <?= $can_buy ?></p>
 
 
