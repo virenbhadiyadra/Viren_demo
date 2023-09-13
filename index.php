@@ -26,6 +26,11 @@ $nutrition = [
         ['name' => 'Fudge',  'price' => 4, 'stock' => 97,],
         ['name' => 'Chocolate',  'price' => 2, 'stock' => 83,],
     ];
+
+    /*echo shorthand*/ 
+  $name      = 'Viren';
+  $favorites = ['Sour Candies', 'jelly Candies', 'Coffee',];
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,6 +69,10 @@ $nutrition = [
       $<?php echo $offers[2]['price']; ?> </p>
       <p><?php echo $offers[3]['name']; ?> -
       $<?php echo $offers[3]['price']; ?> </p>
-      
+
+      <h2>Welcome <?= $name ?></h2>
+    <p>Your favorite type of candy is:
+       <?= $favorites[0] ?>.</p>
+
   </body>
 </html>
