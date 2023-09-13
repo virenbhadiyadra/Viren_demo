@@ -11,7 +11,10 @@ $nutrition = [
     $nutrition['fat']   = 36;
     $nutrition['fiber'] = 2.1;
     $nutrition['protien'] = 7.3;
-  /* */
+  /* updating vaiabels */
+    $name  = 'Guest';
+    $name  = 'Ivy';
+    $price = 5;
 ?>
 <!DOCTYPE html>
 <html>
